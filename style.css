@@ -1,0 +1,230 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  opacity: 0.8;
+  animation: fadeInAnimation 2s ease forwards;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f0f;
+  color: #f1f1f1;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header.container {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #4caf50;
+  border-radius: 50px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #4caf50;
+}
+
+img {
+  display: block;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #4caf50;
+}
+
+.text {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.1rem;
+  margin: 15px 0;
+}
+
+@media (max-width: 600px) {
+  .botao {
+    width: 80%;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+  }
+
+  img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+.botao {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 300px;
+  transition: background-color 0.3s;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.botao:hover {
+  background-color: #FFFFFF;
+  z-index: 999;
+  color: #4caf50;
+  transform: scale(1.055);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  width: 100%;
+  padding: 20px;
+  justify-items: center; /* Centraliza imagens dentro das células */
+  align-items: center; /* Alinha verticalmente (opcional) */
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.55);
+  transform: ease-in 0.2s;
+  box-shadow: 0 0 20px #4CAF50A8;
+}
+
+.escondida {
+  display: none;
+}
+
+#contato {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #4CAF50;
+  border-radius: 20px;
+}
+
+#contato h2 {
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+#contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contato input,
+#contato textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 1rem;
+}
+
+#contato input::placeholder,
+#contato textarea::placeholder {
+  color: #aaa;
+}
+
+#contato button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  transition: transform 0.3s ease;
+}
+
+#contato button:hover {
+  background-color: #ffffff;
+  transform: scale(1.01);
+  color: #4caf50;
+}
+
+#contato a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+#contato a:hover {
+  text-decoration: underline;
+}
+form.h2 {
+  color: #4CAF50;
+}
+
+#ponte img {
+  border: none;
+  height: auto;
+  width: 30px;
+  box-shadow: none;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#scrollButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#scrollButton.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scrollButton:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+  color: #4caf50;
+}
